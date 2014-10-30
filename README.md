@@ -7,4 +7,4 @@ I am grateful for any donations and support.
 
 => [to Support page](http://richard-kng.github.io/support)
 
-__Thank you for your support!__
+###__Thank you for your support!__
