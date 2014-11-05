@@ -28,6 +28,8 @@
         }
         header > span {
             display: inline-block;
+            position: relative;
+            z-index: 999;
             margin: 8px 0 0 10px;
             vertical-align: top;
             font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -35,22 +37,27 @@
             color: #B00000;
         }
         header > img {
-            margin: 5px 10px 0 135px;
+            margin: 15px 0 0 5px;
         }
         header > h1 {
             display: inline-block;
-            margin: 18px 0 0 0;
+            margin: 28px 0 0 55px;
+            padding: 0 75px;
+            border-left:  1px solid #CCC;
+            border-right: 1px solid #CCC;
             vertical-align: top;
             font-family: Calibri, Helvetica, Arial, sans-serif;
             font-weight: 400;
-            color: #888;
+            font-size: 32px;
+            /*color: #888;*/
+            color: #555;
         }
         #container > section {
             height: 100%;
             background: #F2F2F2;
         }
         #options {
-            margin: 90px auto 100px auto;
+            margin: 90px auto 0 auto;
             width: 575px;
             list-style-type: none;
         }
@@ -86,14 +93,16 @@
             text-align: center;
         }
         #social {
-            margin: 50px auto 30px auto;
-            width: 500px;
+            margin: 30px auto 2px auto;
+            padding: 60px 0;
+            width: 100%;
             list-style-type: none;
             text-align: center;
+            -webkit-box-shadow: 0 0 35px 0 #000;
+                    box-shadow: 0 0 35px 0 #000;
         }
         #social > li {
             display: inline-block;
-            opacity: .85;
             margin: 0 40px;
         }
         #ty-top {
@@ -114,8 +123,8 @@
             display: block;
             margin: 0 auto;
             padding: 30px 0 75px 0;
-            border-top: 1px solid #999;
-            width: 400px;
+            border-top: 1px solid #BBB;
+            width: 550px;
             font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
             font-size: 26px;
             text-align: center;
@@ -362,13 +371,14 @@
                     </div>
                 </li>
             </ul>
+            <section id="ty-bottom">Thank you for your support!</section>
+            <a href="#social"></a>
             <ul id="social">
                 <li><a href="https://github.com/richard-kng"><img src="img/social_github.png" alt="Github Icon"></a></li>
                 <li><a href="https://twitter.com/richard_kng"><img src="img/social_twitter.png" alt="Twitter Icon"></a></li>
                 <li><a href="https://plus.google.com/u/0/110254050534139968104"><img src="img/social_google.png" alt="Goolge+ Icon"></a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=100008148916120"><img src="img/social_facebook.png" alt="Facebook Icon"></a></li>
             </ul>
-            <section id="ty-bottom">Thank you for your support!</section>
             <footer>
                 Copyright (c) 2014 "Richard KnG" Richárd Szakács.<br>All other registered trademarks or trademarks are property of their respective owners.
             </footer>
