@@ -12,6 +12,7 @@
             padding: 0;
             border: 0;
             vertical-align: baseline;
+            outline: none;
         }
         body, html {
             height: 100%;
@@ -26,7 +27,13 @@
             border-top: 7px solid #B70000;
             border-bottom: 3px solid #777;
         }
-        header > span {
+        header a {
+            text-decoration: none;
+        }
+        header a:visited {
+            color: #B00000;
+        }
+        header .support {
             display: inline-block;
             position: relative;
             z-index: 999;
@@ -34,6 +41,9 @@
             vertical-align: top;
             font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
             font-size: 10px;
+            color: #B00000;
+        }
+        header .support a {
             color: #B00000;
         }
         header > img {
@@ -51,6 +61,45 @@
             font-size: 32px;
             /*color: #888;*/
             color: #555;
+        }
+        header > h1 a:visited {
+            color: #555;
+        }
+        header > h1 a:hover {
+            color: #BD0000;
+        }
+        header > h1 i {
+            border-bottom: 1px solid #EEE;
+            font-style: normal;
+        }
+        header > h1:before {
+            content: "{";
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            left: -10px;
+            color: #EEE;
+        }
+        header > h1:after {
+            content: "}";
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            left: 10px;
+            color: #EEE;
+        }
+        header > section {
+            display: inline-block;
+            position: relative;
+            margin: 0 0 0 20px;
+            top: -15px;
+            opacity: 0.8;
+        }
+        header > section img {
+            width: 24px;
+        }
+        header > section .email {
+            margin: 0 25px 0 0;
         }
         #container > section {
             height: 100%;
@@ -279,12 +328,20 @@
 <body>
     <div id="container">
         <header>
-            <span>Support</span>
-            <img src="img/logo_r.png" width="48px" alt="Richard KnG Logo">
-            <h1>Richard KnG</h1>
+            <span class="support"><a href="#support">Support</a></span>
+            <img src="img/logo_r.png" alt="Richard KnG Logo">
+            <h1><a href="http://richard-kng.github.io/support/"><i>R</i>ichard <i>KnG</i></a></h1>
+            <section>
+                <a class="github" href="https://github.com/richard-kng"><img src="img/social_github.png" alt="Github Icon"></a>
+                <a class="email" href="mailto:richrdkng@gmail.com"><img src="img/social_email.png" alt="Email Icon"></a>
+                <a class="twitter" href="https://twitter.com/richard_kng"><img src="img/social_twitter.png" alt="Twitter Icon"></a>
+                <a class="google" href="https://plus.google.com/u/0/110254050534139968104"><img src="img/social_google.png" alt="Goolge+ Icon"></a>
+                <a class="facebook" href="https://www.facebook.com/profile.php?id=100008148916120"><img src="img/social_facebook.png" alt="Facebook Icon"></a>
+            </section>
         </header>
         <section>
             <section id="ty-top">is a <span>software developer</span> and <span>web designer</span>, creating <span>web-related</span> tools and utilities, interested in <span>front-end software development</span>, fascinated by <span>back-end software</span>, usually dove deep in <span>tools and libraries</span>.</section>
+            <a id="support"></a>
             <ul id="options">
                 <li>
                     <figure>
