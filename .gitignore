@@ -1,4 +1,9 @@
 # WebStorm
 .idea
+.grunt
+.sass-cache
+node_modules
+scss
 
+idx.html
 PROJECT_NOTES
