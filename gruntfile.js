@@ -1,20 +1,20 @@
-"use strict";
+'use strict';
 
 module.exports = function(grunt) {
     var task = {};
-        task["default"] = {
-            name: "default",
-            list: ["sass", "htmlmin"]
+        task['default'] = {
+            name: 'default',
+            list: ['sass', 'htmlmin']
         };
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON("package.json"),
+        pkg: grunt.file.readJSON('package.json'),
 
         watch: {
             scripts: {
                 files: [
-                    "idx.html",
-                    "scss/*.scss"
+                    'idx.html',
+                    'scss/*.scss'
                 ],
                 tasks: task.default.list,
                 options: {
@@ -25,13 +25,13 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    //style: "nested"
-                    //style: "compact"
-                    style: "compressed"
-                    //style: "expanded"
+                    //style: 'nested'
+                    //style: 'compact'
+                    style: 'compressed'
+                    //style: 'expanded'
                 },
                 files: {
-                    "css/main.css": "scss/main.scss"
+                    'css/main.css': 'scss/main.scss'
                 }
             }
         },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    "index.html": "idx.html"
+                    'index.html': 'idx.html'
                 }
             }
         }

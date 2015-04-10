@@ -5,9 +5,9 @@
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://Richard-KnG@github.com/richard-kng/support.git"
+    "url": "https://github.com/richrdkng/support.git"
   },
-  "author": "Richard KnG <richrdkng@gmail.com> (https://github.com/richard-kng)",
+  "author": "Richard King <richrdkng@gmail.com> (https://github.com/richrdkng)",
   "license": "MIT",
   "devDependencies": {
     "grunt": "~0.4.5",

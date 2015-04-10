@@ -1,0 +1,27 @@
+@mixin outline($size: 1px, $style: dotted, $color: red) {
+    outline: $size $style $color;
+}
+@mixin shadow($horOffset, $verOffset, $blurRadius, $spreadRadius, $color) {
+    -moz-box-shadow:    $horOffset $verOffset $blurRadius $spreadRadius $color;
+    -webkit-box-shadow: $horOffset $verOffset $blurRadius $spreadRadius $color;
+    box-shadow:         $horOffset $verOffset $blurRadius $spreadRadius $color;
+}
+@mixin user-select-none($cursor: default) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: $cursor;
+}
+@mixin user-select-default {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}

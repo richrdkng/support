@@ -1,0 +1,358 @@
+@import "reset";
+@import "utilities";
+
+body, html {
+    //height: 100%;
+    line-height: normal;
+}
+#container {
+    margin: 0 auto;
+    width: 700px;
+    @include shadow(0, 0, 16px, 0, #000);
+
+    > section {
+        height: 100%;
+        background: #F2F2F2;
+    }
+}
+header {
+    border-top: 7px solid #B70000;
+    border-bottom: 3px solid #777;
+
+    a {
+        text-decoration: none;
+
+        &:visited {
+            color: #B00000;
+        }
+    }
+    .support {
+        display: inline-block;
+        position: relative;
+        z-index: 999;
+        margin: 8px 0 0 10px;
+        vertical-align: top;
+        font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        color: #B00000;
+
+        a {
+            color: #B00000;
+        }
+    }
+    .logo {
+        display: inline-block;
+        margin: 15px -10px 0 10px;
+    }
+    .name {
+        display: inline-block;
+        margin: 18px 0 0 55px;
+        padding: 0 82px;
+        border-left:  1px solid #CCC;
+        border-right: 1px solid #CCC;
+        vertical-align: top;
+        font-family: Calibri, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        /*color: #888;*/
+        color: #555;
+
+        &:visited {
+            color: #555;
+        }
+        &:hover {
+            color: #BD0000;
+        }
+
+        &:before {
+            content: "{";
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            left: -10px;
+            color: #EEE;
+        }
+        &:after {
+            content: "}";
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            left: 10px;
+            color: #EEE;
+        }
+    }
+    > section {
+        display: inline-block;
+        position: relative;
+        margin: 0 0 0 20px;
+        top: -15px;
+        opacity: 0.8;
+
+        img {
+            width: 24px;
+        }
+        .email {
+            margin: 0 25px 0 0;
+        }
+    }
+}
+#options {
+    margin: 90px auto 0 auto;
+    width: 575px;
+    list-style-type: none;
+
+    > li {
+        display: block;
+        margin: 25px 0 45px 0;
+        padding: 0 0 0 5px;
+
+        figure {
+            display: inline-block;
+            width: 48px;
+            @include user-select-none();
+
+            > img {
+                margin: 0 0 6px 7px;
+                width: 32px;
+            }
+            &:after {
+                content: "";
+                position: relative;
+                display: inline-block;
+                top: -5px;
+                margin: -100px 0 0 85px;
+                width: 1px;
+                height: 100px;
+                //background: mix(#BD0000, rgba(#555, .05), 15%);
+                background: rgba(#000, .10);
+                @include shadow(2px, 0, 5px, 0, rgba(#000, .10));
+            }
+            figcaption {
+                font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        > div {
+            display: inline-block;
+            margin: 0 0 0 50px;
+        }
+
+        .desc {
+            @include shadow(5px, 0, 5px, -4px, rgba(#000, .05));
+        }
+    }
+    .flattr {
+        .desc {
+            display: inline-block;
+            margin: -100px 40px 0 25px;
+            padding-right: 30px;
+            border-right: 1px solid #CCC;
+            width: 280px;
+            vertical-align: middle;
+            font-family: "Times New Roman", Times, sans-serif;
+            font-size: 14px;
+            text-align: left;
+            color: #888;
+
+            > span {
+                color: #B00000;
+            }
+        }
+        .option {
+            display: inline-block;
+            margin: -100px 0 0 0;
+            vertical-align: middle;
+        }
+    }
+    .gratipay {
+        .desc {
+            display: inline-block;
+            margin: -100px 20px 0 25px;
+            padding-right: 30px;
+            border-right: 1px solid #CCC;
+            width: 150px;
+            vertical-align: middle;
+            font-family: "Times New Roman", Times, sans-serif;
+            font-size: 15px;
+            text-align: left;
+            color: #888;
+
+            > span {
+                color: #B00000;
+            }
+        }
+        .btn {
+            display: inline-block;
+            margin: -95px 20px 0 0;
+            padding-right: 25px;
+            border-right: 1px solid #CCC;
+            vertical-align: middle;
+        }
+        .option {
+            display: inline-block;
+            margin: -95px 0 0 5px;
+            vertical-align: middle;
+        }
+    }
+    .bitcoin {
+        .desc {
+            display: inline-block;
+            margin: -140px 25px 0 25px;
+            padding-right: 30px;
+            border-right: 1px solid #CCC;
+            width: 270px;
+            vertical-align: middle;
+            font-family: "Times New Roman", Times, sans-serif;
+            font-size: 14px;
+            text-align: left;
+            color: #888;
+
+            > span {
+                color: #B00000;
+            }
+        }
+        .addr {
+            display: inline-block;
+            position: absolute;
+            margin: 70px 0 0 -300px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #222;
+        }
+        .qr {
+            display: inline-block;
+            margin: 0 0 0 15px;
+        }
+    }
+    .paypal {
+        form {
+            text-align: center;
+        }
+        select {
+            margin: 0 0 5px 8px;
+            font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            color: #B00000;
+        }
+
+        .desc {
+            display: inline-block;
+            margin: -100px 25px 0 25px;
+            padding-right: 30px;
+            border-right: 1px solid #CCC;
+            width: 200px;
+            vertical-align: middle;
+            font-family: "Times New Roman", Times, sans-serif;
+            font-size: 14px;
+            text-align: left;
+            color: #888;
+
+            > span {
+                color: #B00000;
+            }
+        }
+        .btns {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+
+            form:nth-of-type(1) {
+                margin: 0 0 10px 0;
+                padding: 0 0 10px 0;
+                border-bottom: 2px solid #B00000;
+            }
+        }
+    }
+    .wire {
+        .desc {
+            display: inline-block;
+            margin: -140px 25px 0 75px;
+            padding-right: 30px;
+            border-right: 1px solid #CCC;
+            width: 150px;
+            vertical-align: middle;
+            font-family: "Times New Roman", Times, sans-serif;
+            font-size: 15px;
+            text-align: left;
+            color: #888;
+
+            > span {
+                color: #B00000;
+            }
+        }
+        .bdt {
+            display: inline-block;
+            margin: -180px 25px 0 260px;
+            vertical-align: middle;
+            font-family: "Times New Roman", Times, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            color: #222;
+
+            > span {
+                display: inline-block;
+                margin: 7px 10px 0 0;
+                color: #B00000;
+
+                &:nth-of-type(3) {
+                    margin-right: 21px;
+                }
+            }
+        }
+    }
+}
+.thank {
+    &.top {
+        display: block;
+        margin: 0 auto;
+        padding: 25px 0 25px 0;
+        border-bottom: 1px solid #DDD;
+        width: 600px;
+        font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 19px;
+        text-align: center;
+        color: #444;
+
+        > span {
+            color: #B00000;
+        }
+    }
+    &.bottom {
+        display: block;
+        margin: 0 auto;
+        padding: 30px 0 75px 0;
+        border-top: 1px solid #BBB;
+        width: 550px;
+        font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        text-align: center;
+        color: #B00000;
+    }
+}
+#social {
+    margin: 30px auto 2px auto;
+    padding: 60px 0;
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    @include shadow(0, 0, 35px, 0, #000);
+
+    > li {
+        display: inline-block;
+        margin: 0 40px;
+    }
+}
+footer {
+    padding: 25px;
+    border-bottom: 7px solid #B00000;
+    @include shadow(0, 0, 35px, 0, #000);
+
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: center;
+    color: #888;
+    background: #FFF;
+}
