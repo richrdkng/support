@@ -5,6 +5,6 @@ I am a __software developer__ and __web designer__ from Hungary, creating __web-
 
 I am grateful for any donations and support.
 
-=> [to Support page](http://richard-kng.github.io/support)
+=> [to Support page](http://richrdkng.github.io/support)
 
 ###__Thank you for your support!__
