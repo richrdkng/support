@@ -1,14 +1,19 @@
 'use strict';
 
+    // Task related
 var name        = 'compile-markup',
+
+    // Project & path related
     project     = require('../project'),
-
-    // Paths
     markup      = project.path.markup,
-    templates   = markup+'/assets/templates',
+    assets      = markup+'/assets',
+    templates   = assets+'/templates',
 
+    // Markup data
     data        = require(markup+'/assets/markup-data'),
 
+    // Gulp related
+    Task        = require('./helpers/task.helper'),
     gulp        = require('gulp'),
     debug       = require('gulp-debug'),
     gmustache   = require('gulp-mustache'),
@@ -26,9 +31,10 @@ function processTemplate(pathToTemplate, data) {
     )
 }
 
-module.exports = {
-    name: name,
-    task: function() {
+module.exports = new Task(
+    name,
+    [],
+    function() {
         // Document components and parts
         var doc_head,
             doc_body,
@@ -66,4 +72,4 @@ module.exports = {
                 .pipe(debug())
                 .pipe(gulp.dest(markup));
     }
-};
+);
