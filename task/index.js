@@ -1,12 +1,25 @@
 'use strict';
 
-var project     = require('../project'),
+    // Project related
+var project = require('../project'),
 
-    gulp        = require('gulp'),
+    // Gulp related
+    Task = require('./helpers/task.helper'),
+    gulp = require('gulp'),
 
-    compilemarkup = require('./compile-markup.task'),
-    genpackage  = require('./gen-package.task'),
+    // Asset compilation tasks
+    asset_image  = require('./compile-image.task'),
+    asset_style  = require('./compile-style.task'),
+    asset_script = require('./compile-script.task'),
+    asset_markup = require('./compile-markup.task'),
 
-    log         = console.log;
+    genpackage      = require('./gen-package.task'),
 
-gulp.task(compilemarkup.name, compilemarkup.task);
+    log             = console.log;
+
+Task.to(gulp)
+    // Add asset compilation tasks
+    .addTask(asset_image)
+    .addTask(asset_style)
+    .addTask(asset_script)
+    .addTask(asset_markup);
