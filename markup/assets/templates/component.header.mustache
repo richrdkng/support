@@ -1,1 +1,17 @@
-header
+<nav class="container" role="navigation">
+    <span class="support-label">Support</span>
+
+    <section id="logo" class="row">
+        <div class="col-md-3">
+            <span class="icon-r"></span>
+        </div>
+        <div id="name" class="col-md-6">
+            <span class="name">Richard King</span>
+        </div>
+        <div id="contact-top" class="col-md-3">
+            {{ #contact-top }}
+                <span class="icon-{{ icon.type }}"></span>
+            {{ /contact-top }}
+        </div>
+    </section>
+</nav>
