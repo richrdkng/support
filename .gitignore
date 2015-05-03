@@ -1,4 +1,6 @@
+# WebStorm project
 .idea
+
 .grunt
 .sass-cache
 node_modules
