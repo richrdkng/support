@@ -1,8 +1,5 @@
 # WebStorm project
 .idea
 
-.grunt
-.sass-cache
+# Node modules/vendors
 node_modules
-
-PROJECT_NOTES
