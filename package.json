@@ -9,6 +9,11 @@
   },
   "author": "Richard King <richrdkng@gmail.com> (https://github.com/richrdkng)",
   "license": "MIT",
+  "scripts": {
+    "gulp": "gulp --gulpfile task/index.js",
+    "build": "npm install && grunt build",
+    "test": "grunt --verbose"
+  }
   "devDependencies": {
     "gulp": "^3.8.11"
   }
