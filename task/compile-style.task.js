@@ -13,11 +13,6 @@ var name        = 'compile-style',
     gulp        = require('gulp'),
     debug       = require('gulp-debug'),
     stylus      = require('gulp-stylus'),
-    //gmustache   = require('gulp-mustache'),
-    //rename      = require('gulp-rename'),
-
-    //fs          = require('fs'),
-    //mustache    = require('mustache'),
 
     log         = console.log;
 
