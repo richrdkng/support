@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Richard King> -- <Developer> -- <@richrdkng>
+
+# THANKS
+
+    <Arpad Lippai>
+    <Bognar Boglar>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Bootstrap, jQuery
+    NPM, Gulp, Browserify
+    WebStorm
