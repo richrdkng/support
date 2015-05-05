@@ -14,11 +14,6 @@ var name        = 'compile-image',
     gulp        = require('gulp'),
     debug       = require('gulp-debug'),
     sprite      = require('gulp.spritesmith'),
-    //gmustache   = require('gulp-mustache'),
-    //rename      = require('gulp-rename'),
-
-    //fs          = require('fs'),
-    //mustache    = require('mustache'),
 
     log         = console.log;
 
