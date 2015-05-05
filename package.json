@@ -13,7 +13,9 @@
     "gulp": "gulp --gulpfile task/index.js"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "browserify-shim": "./script/config/config.js",
   "devDependencies": {
@@ -21,6 +23,7 @@
     "browserify-shim": "^3.8.6",
     "gulp": "^3.8.11",
     "gulp-debug": "^2.0.1",
+    "gulp-file": "^0.2.0",
     "gulp-mustache": "^1.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.1",
