@@ -1,6 +1,9 @@
 module.exports = {
     document: {
-        title: 'Support Richard King'
+        title:          'Support Richard King',
+        author:         'Richard King',
+        description:    'Support page of Richard King, a developer from Europe.',
+        keywords:       'richard king, richard, king, {R}, {r}'
     },
     // Placeholders
     header: {},
