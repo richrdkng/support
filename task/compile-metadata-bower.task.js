@@ -1,7 +1,7 @@
 'use strict';
 
     // Task related
-var name    = 'compile-metadata-package',
+var name    = 'compile-metadata-bower',
 
     // Project & path related
     project = require('../project'),
@@ -28,7 +28,7 @@ module.exports = new Task(
 
         var package_json = JSON.stringify(source_obj, null, 2); // indent with 2 spaces
 
-        return file('package-test.json', package_json, {src: true})
+        return file('bower-test.json', package_json, {src: true})
             .pipe(debug())
             .pipe(gulp.dest(root));
     }

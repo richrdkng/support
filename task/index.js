@@ -13,7 +13,10 @@ var project = require('../project'),
     asset_script = require('./compile-script.task'),
     asset_markup = require('./compile-markup.task'),
 
-    genpackage      = require('./gen-package.task'),
+    // Metadata compilation tasks
+    meta_package = require('./compile-metadata-package.task'),
+
+    genpackage      = require('./compile-metadata-package.task.js'),
 
     log             = console.log;
 
@@ -22,4 +25,7 @@ Task.to(gulp)
     .addTask(asset_image)
     .addTask(asset_style)
     .addTask(asset_script)
-    .addTask(asset_markup);
+    .addTask(asset_markup)
+
+    // Add metadata compilation tasks
+    .addTask(meta_package);
