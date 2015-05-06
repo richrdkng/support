@@ -45,6 +45,36 @@ module.exports = {
           icon: {type: 'direct-wire', label: 'Direct Wire'},
           text: 'If you would like to support my projects, you can send money through wire.',
           content: ''
+        },
+        { option: 'pledgie',
+          icon: {type: 'pledgie', label: 'Pledgie'},
+          text: 'If you would like to support my projects, you can send money through wire.',
+          content: ''
+        },
+        { option: 'subbable',
+          icon: {type: 'subbable', label: 'Subbable'},
+          text: 'If you would like to support my projects, you can send money through wire.',
+          content: ''
+        },
+        { option: 'patreon',
+          icon: {type: 'patreon', label: 'Patreon'},
+          text: 'If you would like to support my projects, you can send money through wire.',
+          content: ''
+        },
+        { option: 'spreadshirt',
+          icon: {type: 'spreadshirt', label: 'Spreadshirt'},
+          text: 'If you would like to support my projects, you can send money through wire.',
+          content: ''
+        },
+        { option: 'cafepress',
+          icon: {type: 'cafepress', label: 'CafePress'},
+          text: 'If you would like to support my projects, you can send money through wire.',
+          content: ''
+        },
+        { option: 'zazzle',
+          icon: {type: 'zazzle', label: 'Zazzle'},
+          text: 'If you would like to support my projects, you can send money through wire.',
+          content: ''
         }
     ],
     'thank-you': 'Thank you for your support!',
