@@ -21,7 +21,8 @@ module.exports = new Task(
     name,
     [],
     function() {
-        var spriteStream = gulp.src(assets+'/*.png')
+        var spriteStream = gulp.src('!'+assets+'/sprites.png',
+                                        assets+'/*.png')
                             .pipe(sprite({
                                 imgName: 'sprites.png',
                                 cssName: 'sprites.styl'
@@ -29,7 +30,7 @@ module.exports = new Task(
 
         spriteStream.img
             .pipe(debug())
-            .pipe(gulp.dest(image));
+            .pipe(gulp.dest(assets)); // image assets
 
         spriteStream.css
             .pipe(debug())
