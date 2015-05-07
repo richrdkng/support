@@ -21,8 +21,16 @@ module.exports = new Task(
     name,
     [],
     function() {
-        var spriteStream = gulp.src('!'+assets+'/sprites.png',
-                                        assets+'/*.png')
+        gulp.src([assets+'/apple-touch-icon.png',
+                  assets+'/favicon.ico',
+                  assets+'/tile*.png'])
+                    .pipe(debug())
+                    .pipe(gulp.dest(image));
+
+        var spriteStream = gulp.src(['!'+assets+'/apple-touch-icon.png',
+                                     '!'+assets+'/favicon.ico',
+                                     '!'+assets+'/tile*.png',
+                                         assets+'/*.png'])
                             .pipe(sprite({
                                 imgName: 'sprites.png',
                                 cssName: 'sprites.styl'
@@ -30,7 +38,7 @@ module.exports = new Task(
 
         spriteStream.img
             .pipe(debug())
-            .pipe(gulp.dest(assets)); // image assets
+            .pipe(gulp.dest(image)); // image assets
 
         spriteStream.css
             .pipe(debug())
