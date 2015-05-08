@@ -77,7 +77,8 @@ module.exports = {
     cleanup: new Task(
         name+':cleanup',
         function() {
-            clean([markup+'/*.*'], {force: true}); // force: true allows deleting files outside of cwd
+            clean(markup+'/*.*',
+                {force: true}); // force: true allows deleting files outside of cwd
         }
     )
 };
