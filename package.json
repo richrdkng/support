@@ -30,6 +30,7 @@
     "gulp-stylus": "^2.0.1",
     "gulp.spritesmith": "^3.5.4",
     "mustache": "^2.0.0",
+    "run-sequence": "^1.1.0",
     "vinyl-source-stream": "^1.1.0",
     "vinyl-transform": "^1.0.0"
   }
