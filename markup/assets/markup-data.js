@@ -51,11 +51,6 @@ module.exports = {
           text: 'If you would like to support my projects, you can send money through wire.',
           content: ''
         },
-        { option: 'subbable',
-          icon: {type: 'subbable', label: 'Subbable'},
-          text: 'If you would like to support my projects, you can send money through wire.',
-          content: ''
-        },
         { option: 'patreon',
           icon: {type: 'patreon', label: 'Patreon'},
           text: 'If you would like to support my projects, you can send money through wire.',
