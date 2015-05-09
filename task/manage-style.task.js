@@ -14,10 +14,21 @@ var name        = 'manage-style',
     debug       = require('gulp-debug'),
     stylus      = require('gulp-stylus'),
     clean       = require('del'),
+    rename      = require('gulp-rename'),
+    concat      = require('gulp-concat'),
 
     log         = console.log;
 
 module.exports = {
+    cleanup: new Task(
+        name+':cleanup',
+        function() {
+            clean([
+                style+'/*.*',
+                assets+'/sprites.styl'
+                ], {force: true}); // force: true allows deleting files outside of cwd
+        }
+    ),
     compile: new Task(
         name+':compile',
         function() {
@@ -26,16 +37,26 @@ module.exports = {
                 )
                 .pipe(debug())
                 .pipe(stylus())
+                .pipe(rename({
+                    basename: 'raw_main',
+                    extname:  '.css'
+                }))
                 .pipe(gulp.dest(style));
         }
     ),
-    cleanup: new Task(
-        name+':cleanup',
+    assemble: new Task(
+        name+':assemble',
         function() {
-            clean([
-                style+'/*.*',
-                assets+'/sprites.styl'
-                ], {force: true}); // force: true allows deleting files outside of cwd
+            return gulp.src(
+                    style+'/raw_main.css'
+                )
+                .pipe(debug())
+                //.pipe() // TODO css-clean
+                .pipe(rename({
+                    basename: 'main',
+                    extname:  '.css'
+                }))
+                .pipe(gulp.dest(style));
         }
     )
 };
