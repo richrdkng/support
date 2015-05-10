@@ -16,10 +16,11 @@ var name        = 'manage-style',
     clean       = require('del'),
     rename      = require('gulp-rename'),
     concat      = require('gulp-concat'),
+    sequence    = require('run-sequence'),
 
     log         = console.log;
 
-module.exports = {
+var exports = {
     cleanup: new Task(
         name+':cleanup',
         function() {
@@ -38,7 +39,7 @@ module.exports = {
                 .pipe(debug())
                 .pipe(stylus())
                 .pipe(rename({
-                    basename: 'raw_main',
+                    basename: 'raw-main',
                     extname:  '.css'
                 }))
                 .pipe(gulp.dest(style));
@@ -48,7 +49,7 @@ module.exports = {
         name+':assemble',
         function() {
             return gulp.src(
-                    style+'/raw_main.css'
+                    style+'/raw-main.css'
                 )
                 .pipe(debug())
                 //.pipe() // TODO css-clean
@@ -58,5 +59,16 @@ module.exports = {
                 }))
                 .pipe(gulp.dest(style));
         }
+    ),
+    reconstruct: new Task(
+        name+':reconstruct',
+        function() {
+            sequence(
+                exports.cleanup.getName(),
+                exports.compile.getName(),
+                exports.assemble.getName()
+            );
+        }
     )
 };
+module.exports = exports;

@@ -14,23 +14,36 @@ var name        = 'manage-script',
     browserify  = require('browserify'),
     stream      = require('vinyl-source-stream'),
     clean       = require('del'),
+    rename      = require('gulp-rename'),
 
     log         = console.log;
 
 module.exports = {
+    cleanup: new Task(
+        name+':cleanup',
+        function() {
+            clean([script+'/*.*'], {force: true}); // force: true allows deleting files outside of cwd
+        }
+    ),
     compile: new Task(
         name+':compile',
         function() {
             return browserify(assets+'/main.js')
                     .bundle()
-                    .pipe(stream('main.js'))
+                    .pipe(stream('raw-main.js'))
                     .pipe(gulp.dest(script));
         }
     ),
-    cleanup: new Task(
-        name+':cleanup',
+    assemble: new Task(
+        name+':assemble',
         function() {
-            clean([script+'/*.*'], {force: true}); // force: true allows deleting files outside of cwd
+            return gulp.src(script+'/raw-main.js')
+                    // TODO: uglify
+                    .pipe(rename({
+                        basename: 'main',
+                        extname:  '.js'
+                    }))
+                    .pipe(gulp.dest(script));
         }
     )
 };

@@ -5,6 +5,7 @@ var name        = 'manage-markup',
 
     // Project & path related
     project     = require('../project'),
+    root        = project.path.root,
     markup      = project.path.markup,
     assets      = markup+'/assets',
     templates   = assets+'/templates',
@@ -33,6 +34,13 @@ function processTemplate(pathToTemplate, data) {
 }
 
 module.exports = {
+    cleanup: new Task(
+        name+':cleanup',
+        function() {
+            clean(markup+'/*.*',
+                {force: true}); // force: true allows deleting files outside of cwd
+        }
+    ),
     compile: new Task(
         name+':compile',
         function() {
@@ -74,11 +82,16 @@ module.exports = {
                     .pipe(gulp.dest(markup));
         }
     ),
-    cleanup: new Task(
-        name+':cleanup',
+    assemble: new Task(
+        name+':assemble',
         function() {
-            clean(markup+'/*.*',
-                {force: true}); // force: true allows deleting files outside of cwd
+            return gulp.src(markup+'/raw-index.html')
+                    // TODO: html-min
+                    .pipe(rename({
+                        basename:   'index',
+                        extname:    '.html'
+                    }))
+                    .pipe(gulp.dest(root));
         }
     )
 };

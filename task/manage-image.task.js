@@ -17,10 +17,11 @@ var name        = 'manage-image',
     sprite      = require('gulp.spritesmith'),
     clean       = require('del'),
     rename      = require('gulp-rename'),
+    sequence    = require('run-sequence'),
 
     log         = console.log;
 
-module.exports = {
+var exports = {
     cleanup: new Task(
         name+':cleanup',
         function() {
@@ -48,13 +49,18 @@ module.exports = {
                                        assets+'/*.png'])
                              .pipe(sprite({
                                 imgName: 'sprites.png',
-                                cssName: 'sprites.styl'
+                                imgPath: '../image/sprites.png',
+                                cssName: 'sprites.styl',
+                                padding: 5, // 5px
+                                cssOpts: {
+                                    variableNameTransforms: ['dasherize']
+                                }
                              }));
 
             stream.img // save sprites image
                 .pipe(debug())
                 .pipe(rename({
-                    basename: 'raw_sprites',
+                    basename: 'raw-sprites',
                     extname:  '.png'
                 }))
                 .pipe(gulp.dest(image)); // image assets dir
@@ -71,7 +77,7 @@ module.exports = {
             var pngquant = require('imagemin-pngquant');
 
             new imagemin()
-                .src(image+'/raw_sprites.png')
+                .src(image+'/raw-sprites.png')
                 .use(rename({
                     basename: 'sprites',
                     extname:  '.png'
@@ -80,5 +86,24 @@ module.exports = {
                 .use(pngquant({quality: '65-80', speed: 1}))
                 .run();
         }
+    ),
+    reconstruct: new Task(
+        name+':reconstruct',
+        function() {
+            gulp.task(name+'-compile', [exports.cleanup.getName()], function() {
+
+            });
+
+            gulp.task(name+'-assemble', [], function() {
+
+            });
+
+            sequence(
+                exports.cleanup.getName(),
+                exports.compile.getName(),
+                exports.assemble.getName()
+            );
+        }
     )
 };
+module.exports = exports;
