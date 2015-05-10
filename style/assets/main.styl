@@ -1,5 +1,23 @@
 @require 'defaults'
 
-body {
-  background: gry;
+nav {
+    position: relative;
+
+    border-top:     7px solid red-primary;
+    border-bottom:  3px solid gray-dark;
 }
+    .support-label {
+        position:   absolute;
+        top:        5px;
+        left:       5px;
+        z-index:    100;
+
+        color:      red-primary;
+        font-size:  8px;
+    }
+
+    .logo {
+        display: inline-block;
+
+        sprite($logo-r);
+    }
