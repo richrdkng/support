@@ -1,5 +1,8 @@
-# WebStorm project
+# IntelliJ IDEA project folder
 .idea
+
+# IntelliJ IDEA module library
+/support.iml
 
 # Node modules/vendors
 node_modules
