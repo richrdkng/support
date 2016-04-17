@@ -2,7 +2,7 @@
 .idea
 
 # IntelliJ IDEA module library
-/support.iml
+/*.iml
 
 # Node modules/vendors
 node_modules
