@@ -6,3 +6,6 @@
 
 # Node modules/vendors
 node_modules
+
+# Vagrant box folder
+/www/.vagrant
