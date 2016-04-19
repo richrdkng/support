@@ -1,0 +1,14 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "hashicorp/precise64"
+
+  config.vm.hostname = "support-dev.richrdkng.dev"
+  config.vm.network "private_network", ip: "10.11.12.101"
+
+  config.vm.provision :shell, :path => ".provision/provision.sh"
+
+  # link the gh-pages repository to the folder /www in the guest
+  config.vm.synced_folder "../gh-pages/", "/www"
+end
