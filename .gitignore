@@ -1,10 +1,10 @@
 # IntelliJ IDEA project folder
 .idea
 
-# IntelliJ IDEA module library
-/*.iml
+# Bower components
+bower_components
 
-# Node modules/vendors
+# Node modules
 node_modules
 
 # Vagrant box folder

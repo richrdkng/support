@@ -1,7 +1,8 @@
 {
-  "name": "richrdkng-support",
-  "version": "1.0.0",
-  "description": "GitHub Support Page",
+  "name": "richrdkng-support-dev",
+  "version": "0.0.0",
+  "description": "GitHub Support Page of Richard King",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/richrdkng/support.git"
@@ -10,31 +11,19 @@
   "license": "MIT",
   "main": "index.html",
   "scripts": {
-    "gulp": "gulp --gulpfile task/index.js"
+    "gulp": "gulp --gulpfile gulp/index.js"
   },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": "./script/config/config.js",
   "devDependencies": {
-    "browserify": "^10.1.0",
-    "browserify-shim": "^3.8.6",
-    "del": "^1.1.1",
-    "gulp": "^3.8.11",
-    "gulp-concat": "^2.5.2",
-    "gulp-debug": "^2.0.1",
-    "gulp-file": "^0.2.0",
-    "gulp-mustache": "^1.0.2",
+    "app-root-path": "^1.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-nunjucks": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.0.1",
-    "gulp.spritesmith": "^3.5.4",
-    "imagemin": "^3.1.0",
-    "imagemin-pngquant": "^4.1.0",
-    "mustache": "^2.0.0",
-    "run-sequence": "^1.1.0",
-    "vinyl-source-stream": "^1.1.0",
-    "vinyl-transform": "^1.0.0"
+    "gulp-sass": "^2.2.0",
+    "gulp-sequence": "^0.4.5",
+    "merge2": "^1.0.2",
+    "mkdirp": "^0.5.1",
+    "rekuire": "^0.1.9"
   }
 }
