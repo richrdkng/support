@@ -1,6 +1,9 @@
 # IntelliJ IDEA project folder
 .idea
 
+# IntelliJ IDEA module file
+support-dev.iml
+
 # Bower components
 bower_components
 

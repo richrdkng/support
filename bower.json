@@ -1,0 +1,23 @@
+{
+  "name": "richrdkng-support-dev",
+  "description": "GitHub Support Page of Richard King",
+  "main": "index.html",
+  "authors": [
+    "Richard King <richrdkng@gmail.com> (https://github.com/richrdkng)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/richrdkng/support",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "1.12.3",
+    "requirejs": "2.2.0",
+    "bootstrap": "3.3.6"
+  }
+}
