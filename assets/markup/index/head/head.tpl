@@ -24,6 +24,6 @@
     <link href="css/styles.css" rel="stylesheet">
      -->
 
-    <!-- Humans text -->
-    <link rel="author" href="humans.txt" type="text/plain">
+    <!-- Humans TXT -->
+    <link type="text/plain" rel="author" href="{{ links.root }}/humans.txt">
 </head>

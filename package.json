@@ -16,6 +16,7 @@
   "devDependencies": {
     "app-root-path": "^1.0.0",
     "del": "^2.2.0",
+    "extend": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-debug": "^2.1.2",
     "gulp-nunjucks": "^2.2.0",

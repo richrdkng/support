@@ -1,15 +1,30 @@
-# humanstxt.org/
+# humanstxt.org
 # The humans responsible & technology colophon
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+	Developer: Richard King
+	Contact: richrdkng@gmail.com
+	Twitter: @richrdkng
+	From: Vienna, Austria
 
 # THANKS
 
-    <name>
+    Designer: Árpád Lippai
+    Contact: -
+    From: Hungary
+
+    Designer: Boglár Bodnár
+    Contact: -
+    From: Hungary
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Back-end:
+        Statically Generated Site
+        Node.js, Gulp
+
+    Front-end:
+        RequireJS
+        jQuery
+        Bootstrap

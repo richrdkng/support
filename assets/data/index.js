@@ -166,7 +166,11 @@ module.exports = {
             "2nd-line" : "All trademarks and registered trademarks are the property of their respective owners."
         }
     },
-    404 : {
-
+    404 : {},
+    links : {
+        root : {
+            dev  : "http://support.richrdkng.github.dev",
+            prod : "http://richrdkng.github.io/support"
+        }
     }
 };
